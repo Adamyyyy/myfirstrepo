@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "../../Adam homework"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "myfirstrepo"
+  }
+}
