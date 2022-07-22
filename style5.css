@@ -9,7 +9,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -22,13 +22,14 @@
   height: 100%;
   padding: 40px 100px;
   z-index: 99;
+
+  background-color: var(--background-color);
+  color: var(--font-color);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-transform: uppercase;
-  background-color: var(--background-color);
-  color: var(--font-color);
-  transition: 0.5s;
 }
 
 .showcase.active {
@@ -46,16 +47,16 @@
 .toggle {
   width: 60px;
   height: 60px;
-  background: url("src/menu.svg");
+  background: url(src/menu.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
-  cursor: pointer;
   filter: invert(1);
+  cursor: pointer;
 }
 
 .toggle.active {
-  background-image: url('src/close.svg');
+  background-image: url(src/close.svg);
 }
 
 .showcase,
@@ -80,9 +81,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--overlay-color);
-  mix-blend-mode: overlay;
+  background-color: var(--overlay-color);
   z-index: -1;
+  mix-blend-mode: overlay;
 }
 
 .text h1 {
@@ -90,6 +91,7 @@
   font-weight: 800;
   line-height: 1em;
 }
+
 .text h2 {
   font-size: 4rem;
   font-weight: 800;
@@ -104,28 +106,22 @@
 
 .text a {
   display: inline-block;
-  font-size: 1rem;
-  background-color: var(--font-color);
-  padding: 10px 30px;
-  text-transform: uppercase;
-  color: var(--background-color);
   text-decoration: none;
+  background-color: var(--font-color);
+  color: var(--background-color);
   letter-spacing: 2px;
-  margin-top: 10px;
+  padding: 10px 30px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .text a:hover {
-  letter-spacing: 6px;
+  letter-spacing: 8px;
 }
 
 .social {
-  display: flex;
-}
-
-.social li {
   list-style: none;
+  display: flex;
 }
 
 .social li a {
@@ -143,16 +139,15 @@
 }
 
 .menu {
-  z-index: 1;
-  position:absolute;
-  top: 0;
-  right: 0;
   width: var(--menu-width);
   height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  z-index: 1;
 }
 
 .menu li {
@@ -160,21 +155,25 @@
 }
 
 .menu li a {
-  color: var(--overlay-color);
   text-decoration: none;
+  color: var(--overlay-color);
   font-size: 24px;
 }
 
 @media (max-width: 798px) {
-  .showcase {
-    padding: 40px;
-  }
-
-  .text h1 {
-    font-size: 3rem;
-  }
-
-  .text h2 {
-    font-size: 2rem;
-  }
+.showcase {
+  padding: 40px;
 }
+
+.text h1 {
+  font-size: 3rem;
+}
+
+.text h2 {
+  font-size: 2rem;
+}
+}
+
+
+
+
