@@ -9,27 +9,25 @@
 
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 .showcase {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px 100px;
-  z-index: 99;
-
-  background-color: var(--background-color);
-  color: var(--font-color);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 40px 100px;
+  color: var(--font-color);
+  z-index: 99;
   text-transform: uppercase;
+  background-color: var(--background-color);
 }
 
 .showcase.active {
@@ -38,7 +36,6 @@
 }
 
 .showcase header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,40 +44,40 @@
 .toggle {
   width: 60px;
   height: 60px;
-  background: url(src/menu.svg);
+  background-image: url(src/menu.svg);
   background-repeat: no-repeat;
-  background-size: 30px;
   background-position: center;
+  background-size: 30px;
   filter: invert(1);
   cursor: pointer;
 }
 
 .toggle.active {
-  background-image: url(src/close.svg);
+ background-image: url(src/close.svg);
 }
 
-.showcase,
-.toggle {
-  transition: 0.2s;
+.toggle,
+.showcase {
+  transition: 0.5s;
 }
 
 .showcase video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
   object-fit: cover;
+  top: 0;
+  left: 0;
   z-index: -1;
   opacity: 0.8;
 }
 
 .showcase .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: var(--overlay-color);
   z-index: -1;
   mix-blend-mode: overlay;
@@ -88,14 +85,14 @@
 
 .text h1 {
   font-size: 5rem;
-  font-weight: 800;
   line-height: 1em;
+  font-weight: 800;
 }
 
 .text h2 {
   font-size: 4rem;
-  font-weight: 800;
   line-height: 1em;
+  font-weight: 800;
 }
 
 .text p {
@@ -107,21 +104,25 @@
 .text a {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--font-color);
   color: var(--background-color);
+  font-size: 1rem;
+  background-color: var(--font-color);
   letter-spacing: 2px;
-  padding: 10px 30px;
+  padding: 9px 25px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .text a:hover {
-  letter-spacing: 8px;
+  letter-spacing: 6px;
 }
 
 .social {
-  list-style: none;
   display: flex;
+}
+
+.social li {
+  list-style: none;
 }
 
 .social li a {
@@ -136,6 +137,7 @@
 
 .social li a:hover {
   transform: translateY(-10px);
+  
 }
 
 .menu {
@@ -144,10 +146,10 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 .menu li {
@@ -155,25 +157,20 @@
 }
 
 .menu li a {
-  text-decoration: none;
   color: var(--overlay-color);
   font-size: 24px;
+  text-decoration: none;
 }
 
 @media (max-width: 798px) {
-.showcase {
-  padding: 40px;
+  .showcase {
+    padding: 40px;
+  }
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .text h2 {
+    font-size: 2rem;
+  }
 }
-
-.text h1 {
-  font-size: 3rem;
-}
-
-.text h2 {
-  font-size: 2rem;
-}
-}
-
-
-
-
